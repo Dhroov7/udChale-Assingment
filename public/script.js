@@ -17,22 +17,19 @@ $(() => {
                     .attr('class', "list-group-item")
                     .append(
                         $('<span>')
-                        .attr('class', "col-8 py-1")
+                        .attr('class', "py-1")
                         .text(airport.name)
                       .append(
-                        $('<button>')
+                        $('<a>')
                         .text("Edit")
-                        .attr('class', "btn btn-warning col-2 mx-2")
+                        .attr('class', "btn btn-warning ml-5")
                         .attr('data-id', `${airport.code}`)
-                        .click(function (event) {
-                          event.preventDefault()
-                          $.post('/')
-                        })
+                        .attr('href', `/edit/${airport.code}`)
                       )
                       .append(
                         $('<button>')
                         .text("Delete")
-                        .attr('class', "btn btn-danger col-2 mx-2")
+                        .attr('class', "btn btn-danger ml-2")
                         .attr('data-id', `${airport.code}`)
                         .click(function (event) {
                           event.preventDefault()

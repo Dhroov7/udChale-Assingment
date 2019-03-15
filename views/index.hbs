@@ -20,11 +20,40 @@
         </div>
         <div class="col"></div>
     </div>
+    {{#if message}}
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <div class="alert alert-success" role="alert">
+                {{message}}
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+    {{/if}}
+    {{#if error}}
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <div class="alert alert-danger" role="alert">
+                {{error}}
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+    {{/if}}
+    <div class="row mt-4">
+        <div class="col-5"></div>
+        <div class="col">
+            <a class="btn btn-primary" href="/add">Add New Airport</a>
+        </div>
+        <div class="col-5"></div>
+    </div>
     <div class="row mt-5">
         <div class="col-3"></div>
         <div class="col">
             <div class="form-group">
-                <input class="form-control" id="searchAirport" style="border-radius: 25px; background-color: #C0C0C0"
+                <input class="form-control" id="searchAirport" style="border-radius: 25px; background-color: #DCDCDC"
                     type="text" placeholder="Enter Airport Name or City or Airport Code" />
             </div>
             <button id="search" style="border-radius: 25px; position: relative;left:40%"
